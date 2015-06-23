@@ -18,7 +18,15 @@ io.on('connection', function(socket){
             username: socket.username
         });
         n++;
-        console.log("There are "+n+" people,now.");
+        if(n == 0){
+            console.log("There is no people,now.");
+        }
+        else if(n == 1){
+            console.log("There is "+n+" people,now.");
+        }
+        else{
+            console.log("There are "+n+" people,now.");
+        }
         console.log("");
      });
     
@@ -36,7 +44,15 @@ io.on('connection', function(socket){
             username:socket.username
         });
         n--;
-        console.log("There are "+n+" people,now.");
+        if(n == 0){
+            console.log("There is no people,now.");
+        }
+        else if(n == 1){
+            console.log("There is "+n+" people,now.");
+        }
+        else{
+            console.log("There are "+n+" people,now.");
+        }
         console.log("");
      });
 });
