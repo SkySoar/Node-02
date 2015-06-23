@@ -13,7 +13,7 @@ io.on('connection', function(socket){
 
      socket.on('add user',function(msg){
         socket.username = msg;
-        console.log("new user: "+msg+" Has Enter.");
+        console.log(msg+" Has Enter.");
         io.emit('add user',{
             username: socket.username
         });
